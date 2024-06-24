@@ -1,0 +1,184 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Itin", cursive;
+  background-color: black;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tablero{
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+
+#jugador{
+  color:#2732a4;
+  font-size: 20px;
+}
+#ganador{
+  font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.celdas {
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid white;
+  width: 150px;
+  height: 110px;
+  font-weight: bold;
+  font-size: 80px;
+
+}
+.celdas:hover {
+  cursor: pointer;
+}
+
+.resultados {
+  border-collapse: collapse;
+  text-align: center;
+}
+.casillas {
+  border: 2px solid white;
+  width: 71px;
+}
+
+.menu, .time{
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 300px;
+  height: 500px;
+
+}
+.btn1, .btn2, .btn3{
+  padding: auto;
+  text-decoration: none;
+  color: white;
+  background-color: red ;
+  border: red;
+  border-radius: 3px;
+  width: 150px ;
+  height: 50px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn1:hover, .btn2:hover, .btn3:hover{
+  background-color: #C43535;
+}
+
+.btn2:hover, .btn2:active, .btn3:active{
+  background-color: #C43535;
+}
+
+
+.btn3{
+  margin-left: 40px ;
+}
+
+.playerX{
+  color:#2732a4;
+
+}
+.playerO{
+  color:#227c1a;
+
+}
+
+/****************TERCER BLOQUE********************/
+
+.time{
+  display: flex;
+  flex-direction:column;
+
+}
+
+.cronometro{
+  margin-bottom: 30px;
+  background-color: #b1b6b4;
+  border: 1px solid #b1b6b4;
+  border-radius: 15px;
+}
+p{
+  border-radius: 15px;
+  color: black;
+  background-color: #b1b6b4;
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+}
+.num{
+  font-size: 80px;
+}
+
+
+/***************PRIMER BLOQUE*************************/
+h2{
+  background-color: #b1b6b4;
+  border-radius: 15px;
+  color: black;
+
+}
+.lt{
+  background-color: #b1b6b4;
+  font-size: 25px;
+  color: black;
+
+}
+.menu{
+  display: flex;
+  flex-direction:column;
+
+}
+
+.bloque1{
+  margin-bottom: 30px;
+  background-color: #b1b6b4;
+  border: 1px solid #b1b6b4;
+  border-radius: 15px;
+}
+
+
+
+/*****************CHECKBOX 1*********************/
+.btn-switch1,.btn-switch2, .btn-switch3, .btn-switch4{
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  background: #565b5b;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+#cb-1:checked~ .btn-switch1, #cb-2:checked~ .btn-switch2, #cb-3:checked~ .btn-switch3, #cb-4:checked~ .btn-switch4{
+  background:  #61a0ff;
+}
+.btn-switch1:after, .btn-switch2:after, .btn-switch3:after, .btn-switch4:after{
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 100px;
+  top: 3px;
+  left: 5px;
+  transition: 0.3s;
+}
+#cb-1:checked~ .btn-switch1:after, #cb-2:checked~ .btn-switch2:after, #cb-3:checked~ .btn-switch3:after, #cb-4:checked~ .btn-switch4:after{
+left: 15px;
+}
+#cb-1, #cb-2, #cb-3, #cb-4 {
+  display: none;
+}
+

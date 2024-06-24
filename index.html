@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="menu">
+    <form action="">
+      <div class="bloque1">
+        <h2>NIVEL DE JUEGO</h2> <br>
+        <input type="checkbox" id="cb-1" />
+        <label for="cb-1" class="btn-switch1"></label> <span class="lt">6 Fichas</span> <br />
+        <input type="checkbox" id="cb-2" />
+        <label for="cb-2" class="btn-switch2"></label> <span class="lt">9 Fichas</span> <br />
+        <br>
+      </div>
+      <div class="bloque1">
+
+        <h2>MODO DE JUEGO</h2> <br>
+        <input type="checkbox" id="cb-3" />
+        <label for="cb-3" class="btn-switch3"></label> <span class="lt">J1 vs J2</span> <br />
+
+        <input type="checkbox" id="cb-4" />
+        <label for="cb-4" class="btn-switch4"></label> <span class="lt">J1 vs IA</span> <br />
+        <br />
+      </div>
+      <input type="button" id="jugar" value="JUGAR" class="btn1" onclick="escoger()" />
+
+    </form>
+  </div>
+  <div class="tablero">
+    <h1>TRES EN RAYA</h1>
+
+    Turno del jugador<span id="jugador"> "X"</span>
+
+    <table class="tablero">
+      <tr>
+        <td> <button id="00" class="celdas" value="" onclick="seleccionaCasilla(0,0)"></button></td>
+        <td> <button id="10" class="celdas" value="" onclick="seleccionaCasilla(1,0)"></button></td>
+        <td> <button id="20" class="celdas" value="" onclick="seleccionaCasilla(2,0)"></button></td>
+      </tr>
+      <tr>
+        <td> <button id="01" class="celdas" value="" onclick="seleccionaCasilla(0,1)"></button></td>
+        <td> <button id="11" class="celdas" value="" onclick="seleccionaCasilla(1,1)"></button></td>
+        <td> <button id="21" class="celdas" value="" onclick="seleccionaCasilla(2,1)"></button></td>
+      </tr>
+      <tr>
+        <td> <button id="02" class="celdas" value="" onclick="seleccionaCasilla(0,2)"></button></td>
+        <td> <button id="12" class="celdas" value="" onclick="seleccionaCasilla(1,2)"></button></td>
+        <td> <button id="22" class="celdas" value="" onclick="seleccionaCasilla(2,2)"></button></td>
+      </tr>
+    </table>
+    <h4 id="ganador"></h4>
+    <br>
+    <table class="resultados">
+      <tr>
+        <th class="casillas" colspan="3"><b class="playerX">JUGADOR X</b> </th>
+        <th class="casillas" colspan="3"><b class="playerO">JUGADOR O</b></th>
+      </tr>
+      <tr>
+        <td class="casillas">Ganadas</td>
+        <td class="casillas">Empatadas</td>
+        <td class="casillas">Perdidas</td>
+        <td class="casillas">Ganadas</td>
+        <td class="casillas">Empatadas</td>
+        <td class="casillas">Perdidas</td>
+      </tr>
+      <tr>
+        <td class="casillas" id="ganadas-JX">0</td>
+        <td class="casillas" id="empatadas-JO">0</td>
+        <td class="casillas" id="perdidas-JX">0</td>
+        <td class="casillas" id="ganadas-JO">0</td>
+        <td class="casillas" id="empatadas-JX">0</td>
+        <td class="casillas" id="perdidas-JO">0</td>
+      </tr>
+    </table>
+    <br />
+    <button class="btn2" id="restaurar" onclick="reiniciar()">REINICIAR</button>
+    <button class="btn3" id="restaurar" onclick="detenerJuego()">DETENER</button>
+
+  </div>
+
+  <div class="time">
+    <div class="cronometro">
+      <p>Tiempo de juego:</p> <br>
+      <p class="num" id="minutos">00</p>
+      <p class="num">:</p>
+      <p class="num" id="segundos">00</p> <br>
+    </div>
+
+    <div class="cronometro">
+      <p>Tiempo de jugada:</p> <br>
+      <p class="num" id="contador">00:30</p>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
